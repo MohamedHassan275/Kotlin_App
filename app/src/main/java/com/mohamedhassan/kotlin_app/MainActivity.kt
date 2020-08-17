@@ -31,12 +31,20 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        text1.text = "this is amazing !!! "
+       // text1.text = "this is amazing !!! "
+        text1.text = intent.getStringExtra("NameListView")
+
+        var TextViewName = intent.getStringExtra("NameListView")
+        var TextViewLangAndroid =intent.getStringExtra("NameListView")
+
+
 
         btn_comit.setOnClickListener {
             var Et_LangAndroid = et_Et_LangAndroid.text
 
-            text1.text = "this is amazing code  $Et_LangAndroid"
+          //  text1.text = "this is amazing code  $Et_LangAndroid"
+
+            startActivity(Intent(this,ListViewActivity::class.java))
 
         }
 
