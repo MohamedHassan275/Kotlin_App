@@ -69,6 +69,7 @@ class RegisterFirebaseActivity : AppCompatActivity() {
                 if(task.isSuccessful){
 
                     Toast.makeText(this,"OnSuccess",Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this,LoginFirebaseActivity::class.java))
 
                 } else {
 
