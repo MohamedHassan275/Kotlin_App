@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FireBase.RegisterFirebaseActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_NameFirebase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:gravity="center"
+            android:textColor="@color/colorAccent2"
+            android:textColorHint="#A19B9B"
+            android:textSize="17sp"/>
+
+
+        <EditText
+            android:id="@+id/et_EmailFirebase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent2"
+            android:textColorHint="#A19B9B"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id="@+id/et_PasswordFirebase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent2"
+            android:textColorHint="#A19B9B"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id="@+id/et_PasswordFirebase2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PassDataName"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent2"
+            android:textColorHint="#A19B9B"
+            android:textSize="17sp"/>
+
+
+        <Button
+            android:id="@+id/btn_RegisterFirebase"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:background="@color/colorAccent2"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            android:textColor="#FFFFFF"/>
+
+
+        <Button
+            android:id="@+id/btn_BackToLoginFirebase"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to login"
+            android:background="@color/colorAccent2"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            android:textColor="#FFFFFF"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

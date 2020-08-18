@@ -1,5 +1,6 @@
 package com.mohamedhassan.kotlin_app.FireBase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -26,18 +27,19 @@ class LoginFirebaseActivity : AppCompatActivity() {
 
         BtnLoginFirebase.setOnClickListener {
 
-
+            SignIn()
 
         }
 
         btnRegisterFirebase.setOnClickListener {
 
-            SignUp()
+           startActivity(Intent(this,RegisterFirebaseActivity::class.java))
+
         }
 
     }
 
-    private fun SignUp (){
+    private fun SignIn (){
 
 
     }
