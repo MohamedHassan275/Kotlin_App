@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.mohamedhassan.kotlin_app.FireBase.LoginFirebaseActivity
 import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var btn_comit : Button
     lateinit var btn_PassDataIntent : Button
     lateinit var btn_PassObjectIntent : Button
+    lateinit var btn_Firebase : Button
     lateinit var et_Et_LangAndroid : EditText
     lateinit var et_PassData : EditText
 
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         btn_comit = findViewById(R.id.btn_comit)
         btn_PassDataIntent = findViewById(R.id.btn_PassDataIntent)
         btn_PassObjectIntent = findViewById(R.id.btn_PassObjectIntent)
+        btn_Firebase = findViewById(R.id.btn_Firebase)
         et_Et_LangAndroid = findViewById(R.id.et_Et_LangAndroid)
         et_PassData = findViewById(R.id.et_PassData)
 
@@ -65,6 +68,11 @@ class MainActivity : AppCompatActivity() {
                 .putExtra("Data2",Data2))
         }
 
+        btn_Firebase.setOnClickListener {
+
+            startActivity(Intent(this,LoginFirebaseActivity::class.java))
+
+        }
     }
 
 }

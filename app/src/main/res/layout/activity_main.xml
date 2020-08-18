@@ -48,7 +48,7 @@
             android:layout_marginLeft="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Comit"
+            android:text="Go ListView"
             android:background="@color/colorAccent2"
             android:textAllCaps="false"
             android:textSize="17sp"
@@ -75,6 +75,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pass Object Data"
+            android:background="@color/colorAccent2"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btn_Firebase"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login And Register in Firebase"
             android:background="@color/colorAccent2"
             android:textAllCaps="false"
             android:textSize="17sp"

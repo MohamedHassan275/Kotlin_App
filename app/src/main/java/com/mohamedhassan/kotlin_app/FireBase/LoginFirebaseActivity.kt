@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.mohamedhassan.kotlin_app.R
 
@@ -25,9 +26,21 @@ class LoginFirebaseActivity : AppCompatActivity() {
         BtnLoginFirebase = findViewById(R.id.btn_LoginFirebase)
         btnRegisterFirebase = findViewById(R.id.btn_RegisterFirebase)
 
+
         BtnLoginFirebase.setOnClickListener {
 
-            SignIn()
+            var Email = et_EmailFirebase.text.toString().trim()
+            var Password = etPasswordFirebase.text.toString().trim()
+
+            if(!(Email.isEmpty()|| Password.isEmpty())){
+
+              SignIn(Email,Password)
+
+          } else{
+
+              Toast.makeText(this,"please enter your email and password",Toast.LENGTH_LONG).show()
+          }
+
 
         }
 
@@ -39,8 +52,21 @@ class LoginFirebaseActivity : AppCompatActivity() {
 
     }
 
-    private fun SignIn (){
+    private fun SignIn (email:String,password:String){
 
 
+        myAuth.signInWithEmailAndPassword(email,password)
+            .addOnCompleteListener { task ->
+
+                if(task.isSuccessful){
+
+                    Toast.makeText(this,"OnSuccess",Toast.LENGTH_LONG).show()
+
+                } else {
+
+                    Toast.makeText(this,"OnError",Toast.LENGTH_LONG).show()
+                }
+            }
     }
+
 }
