@@ -19,17 +19,28 @@ class ListViewActivity : AppCompatActivity() {
         ListView = findViewById(R.id.ListView)
         ListViewPosion = findViewById(R.id.ListViewPosion)
 
+        var  listViewItem  = mutableListOf<Person>()
 
-        var ListViewName = arrayOf("Mohamed","Ahmed","Islam","Mahmoud","Hossam","Fatma","Reham")
-        ListView.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,ListViewName)
+        listViewItem.add(Person("Mohamed","25","Nasr City",R.drawable.ic_launcher_background))
+        listViewItem.add(Person("Ahmed","19","Sohag City",R.drawable.ic_launcher_background))
+        listViewItem.add(Person("Mahmoud","23","Asuit City",R.drawable.ic_launcher_background))
+        listViewItem.add(Person("Ali","22","Menia City",R.drawable.ic_launcher_background))
+        listViewItem.add(Person("Islam","22","Giza City",R.drawable.ic_launcher_background))
 
-        ListView.setOnItemClickListener{
-            parent: AdapterView<*>?, view: View?, position: Int, l: Long ->
-            ListViewPosion.text = ListViewName[position]
-            var NameListView = ListViewName[position]
-            Toast.makeText(this,"this position is " + ListViewName[position],Toast.LENGTH_LONG).show()
-            startActivity(Intent(this,MainActivity::class.java).putExtra("NameListView",NameListView))
-        }
+        var  adapterView = MyAdapterList(this,R.layout.my_list_view,listViewItem)
+
+        ListView.adapter = adapterView
+
+//        var ListViewName = arrayOf("Mohamed","Ahmed","Islam","Mahmoud","Hossam","Fatma","Reham")
+//        ListView.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,ListViewName)
+//
+//        ListView.setOnItemClickListener{
+//            parent: AdapterView<*>?, view: View?, position: Int, l: Long ->
+//            ListViewPosion.text = ListViewName[position]
+//            var NameListView = ListViewName[position]
+//            Toast.makeText(this,"this position is " + ListViewName[position],Toast.LENGTH_LONG).show()
+//            startActivity(Intent(this,MainActivity::class.java).putExtra("NameListView",NameListView))
+//        }
 
 
     }
