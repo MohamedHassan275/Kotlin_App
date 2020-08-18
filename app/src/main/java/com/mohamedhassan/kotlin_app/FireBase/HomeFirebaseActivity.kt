@@ -21,6 +21,9 @@ class HomeFirebaseActivity : AppCompatActivity() {
         LoginIn = findViewById(R.id.LoginIn);
         btn_SingOut = findViewById(R.id.btn_SingOut)
 
+        var emailLogin = intent.getStringExtra("email")
+        LoginIn.text  =  " this is my email perfect $emailLogin"
+
         btn_SingOut.setOnClickListener {
             view ->
             myAuth.signOut()

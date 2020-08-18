@@ -61,7 +61,8 @@ class LoginFirebaseActivity : AppCompatActivity() {
                 if(task.isSuccessful){
 
                     Toast.makeText(this,"OnSuccess",Toast.LENGTH_LONG).show()
-                    startActivity(Intent(this,HomeFirebaseActivity::class.java))
+                    startActivity(Intent(this,HomeFirebaseActivity::class.java)
+                        .putExtra("email",email))
 
                 } else {
 
