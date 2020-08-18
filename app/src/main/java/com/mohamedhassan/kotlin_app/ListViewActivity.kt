@@ -22,10 +22,10 @@ class ListViewActivity : AppCompatActivity() {
         var listViewItem = mutableListOf<Person>()
 
         listViewItem.add(Person("Mohamed", "25", "Nasr City", R.drawable.ic_launcher_background))
-        listViewItem.add(Person("Ahmed", "19", "Sohag City", R.drawable.ic_launcher_background))
-        listViewItem.add(Person("Mahmoud", "23", "Asuit City", R.drawable.ic_launcher_background))
-        listViewItem.add(Person("Ali", "22", "Menia City", R.drawable.ic_launcher_background))
-        listViewItem.add(Person("Islam", "22", "Giza City", R.drawable.ic_launcher_background))
+        listViewItem.add(Person("Ahmed", "21", "Sohag City", R.drawable.ic_launcher_background))
+        listViewItem.add(Person("Mahmoud", "27", "Asuit City", R.drawable.ic_launcher_background))
+        listViewItem.add(Person("Ali", "22", "Mania City", R.drawable.ic_launcher_background))
+        listViewItem.add(Person("Islam", "27", "Nasr City", R.drawable.ic_launcher_background))
 
         var adapterView = MyAdapterList(this, R.layout.my_list_view, listViewItem)
 
@@ -33,11 +33,10 @@ class ListViewActivity : AppCompatActivity() {
 
         ListView.setOnItemClickListener { parent: AdapterView<*>?, view: View?, position: Int, l: Long ->
             var NameListView = listViewItem[position]
-
             var person: Person = listViewItem[position]
-            ListViewPosion.text = person.Address
-            Toast.makeText(this, "this position is " + person.Address, Toast.LENGTH_LONG)
-                .show()
+            ListViewPosion.text = "my name is ${person.Name} , my old is ${person.Age} And  i live in ${person.Address} "
+            Toast.makeText(this, "my name is ${person.Name} , my old is ${person.Age} And  i live in ${person.Address} ",
+                Toast.LENGTH_LONG).show()
             // startActivity(Intent(this,MainActivity::class.java).putExtra("NameListView",NameListView))
         }
 
